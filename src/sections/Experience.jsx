@@ -109,7 +109,7 @@ const Experience = () => {
                       <img 
                         src={card.imgPath} 
                         alt="exp-img" 
-                        className="w-auto max-h-40 xl:max-h-52 object-contain rounded-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]" 
+                        className="w-auto max-h-32 md:max-h-40 xl:max-h-52 object-contain rounded-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]" 
                       />
                     </div>
                   </GlowCard>
