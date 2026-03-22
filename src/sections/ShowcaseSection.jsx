@@ -49,36 +49,66 @@ const AppShowcase = () => {
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
             <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde App Interface" />
+              <img src="/images/1765698003746.jpg" alt="Choudhary Vastralya" />
             </div>
             <div className="text-content">
               <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Ryde
+                Choudhary Vastralya — Premium Indian Ethnic Wear E-Commerce Platform
               </h2>
               <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
+                A full-stack, production-ready boutique e-commerce platform for royal Indian couture with AI-powered features, real-time inventory, and secure payment processing.
               </p>
+              <div className="flex flex-wrap gap-2 mt-4 text-sm font-medium">
+                {['React 19', 'TypeScript', 'Tailwind CSS', 'Redux Toolkit', 'Firebase', 'Razorpay', 'Gemini AI'].map((tag) => (
+                  <span key={tag} className="bg-white/10 text-white-50 px-3 py-1 rounded-full border border-white/20">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
           <div className="project-list-wrapper overflow-hidden">
-            <div className="project" ref={libraryRef}>
-              <div className="image-wrapper bg-[#FFEFDB]">
+            <div className="project flex flex-col gap-4" ref={libraryRef}>
+              <div className="image-wrapper bg-[#FFEFDB] overflow-hidden rounded-3xl">
                 <img
                   src="/images/project2.png"
-                  alt="Library Management Platform"
+                  alt="Netflix_GPT"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <h2>The Library Management Platform</h2>
+              <div className="flex flex-col gap-2">
+                <h2 className="text-2xl font-bold">Netflix_GPT</h2>
+                <p className="text-white-50 text-sm">
+                  An AI movie discovery platform integrating TMDB API and OpenAI GPT to allow natural language movie searches with optimized state management.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2 text-xs font-medium">
+                  {['React', 'Redux Toolkit', 'Firebase', 'OpenAI API'].map((tag) => (
+                    <span key={tag} className="bg-white/10 text-white-50 px-2 py-1 rounded-md border border-white/20">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
 
-            <div className="project" ref={ycDirectoryRef}>
-              <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+            <div className="project flex flex-col gap-4" ref={ycDirectoryRef}>
+              <div className="image-wrapper bg-[#FFE7EB] overflow-hidden rounded-3xl">
+                <img src="/images/project3.png" alt="Pallet QR Dine-In" className="w-full h-full object-cover" />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <div className="flex flex-col gap-2">
+                <h2 className="text-2xl font-bold">Pallet QR Dine-In Platform</h2>
+                <p className="text-white-50 text-sm">
+                  A high-performance B2C table-ordering flow featuring React Query caching, custom cart flows, and geolocation & logistics bypass optimizations.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2 text-xs font-medium">
+                  {['React', 'TanStack Query', 'Redux', 'Performance'].map((tag) => (
+                    <span key={tag} className="bg-white/10 text-white-50 px-2 py-1 rounded-md border border-white/20">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>

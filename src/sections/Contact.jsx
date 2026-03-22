@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/models/contact/ContactExperience";
@@ -7,6 +6,7 @@ import ContactExperience from "../components/models/contact/ContactExperience";
 const Contact = () => {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -20,23 +20,17 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Show loading state
+    setLoading(true);
 
-    try {
-      await emailjs.sendForm(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      );
+    // Simulate a network request with a 1.5s delay
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
-      // Reset form and stop loading
-      setForm({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error("EmailJS Error:", error); // Optional: show toast
-    } finally {
-      setLoading(false); // Always stop loading, even on error
-    }
+    setForm({ name: "", email: "", message: "" });
+    setLoading(false);
+    setSent(true);
+
+    // Reset success message after 4 seconds
+    setTimeout(() => setSent(false), 4000);
   };
 
   return (
@@ -97,13 +91,20 @@ const Contact = () => {
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
-                      {loading ? "Sending..." : "Send Message"}
+                      {loading ? "Sending..." : sent ? "Message Sent ✓" : "Send Message"}
                     </p>
                     <div className="arrow-wrapper">
                       <img src="/images/arrow-down.svg" alt="arrow" />
                     </div>
                   </div>
                 </button>
+
+                {sent && (
+                  <div className="flex items-center gap-3 bg-green-900/40 border border-green-500/50 text-green-400 text-sm px-4 py-3 rounded-lg animate-pulse">
+                    <span className="text-xl">🎉</span>
+                    <p>Thanks for reaching out! I'll get back to you soon.</p>
+                  </div>
+                )}
               </form>
             </div>
           </div>

@@ -26,7 +26,7 @@ const NavBar = () => {
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
         <a href="#hero" className="logo">
-          Adrian JSM
+          Lovelesh Kumar
         </a>
 
         <nav className="desktop">
@@ -42,11 +42,18 @@ const NavBar = () => {
           </ul>
         </nav>
 
-        <a href="#contact" className="contact-btn group">
-          <div className="inner">
-            <span>Contact me</span>
-          </div>
-        </a>
+        <div className="flex items-center gap-4">
+          <a href="/Lovelesh_Resume.pdf" target="_blank" rel="noopener noreferrer" className="contact-btn group hidden md:flex">
+            <div className="inner !bg-transparent border border-white !text-white hover:!bg-white-50">
+              <span className="group-hover:!text-black transition-colors duration-300">Resume</span>
+            </div>
+          </a>
+          <a href="#contact" className="contact-btn group">
+            <div className="inner">
+              <span>Contact me</span>
+            </div>
+          </a>
+        </div>
       </div>
     </header>
   );
