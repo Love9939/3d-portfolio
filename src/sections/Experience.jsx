@@ -105,8 +105,12 @@ const Experience = () => {
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
                   <GlowCard card={card}>
-                    <div>
-                      <img src={card.imgPath} alt="exp-img" />
+                    <div className="flex justify-center items-center h-full py-4">
+                      <img 
+                        src={card.imgPath} 
+                        alt="exp-img" 
+                        className="w-auto max-h-40 xl:max-h-52 object-contain rounded-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]" 
+                      />
                     </div>
                   </GlowCard>
                 </div>
@@ -117,8 +121,8 @@ const Experience = () => {
                       <div className="gradient-line w-1 h-full" />
                     </div>
                     <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
-                      <div className="timeline-logo">
-                        <img src={card.logoPath} alt="logo" />
+                      <div className="timeline-logo overflow-hidden bg-white/5 border border-white-50 p-2">
+                        <img src={card.logoPath} alt="logo" className="w-full h-full object-contain rounded-full shadow-lg" />
                       </div>
                       <div>
                         <h1 className="font-semibold text-3xl">{card.title}</h1>

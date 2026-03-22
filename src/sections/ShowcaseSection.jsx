@@ -94,7 +94,7 @@ const AppShowcase = () => {
 
             <div className="project flex flex-col gap-4" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB] overflow-hidden rounded-3xl">
-                <img src="/images/project3.png" alt="Pallet QR Dine-In" className="w-full h-full object-cover" />
+                <img src="/images/qr-dine-in.png" alt="Pallet QR Dine-In" className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col gap-2">
                 <h2 className="text-2xl font-bold">Pallet QR Dine-In Platform</h2>

@@ -148,8 +148,8 @@ const techStackIcons = [
 const expCards = [
   {
     review: "Architected and developed a QR-based dine-in ordering system, reducing redundant API calls significantly using React Query concepts.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
+    imgPath: "/images/twinleaves-logo.png",
+    logoPath: "/images/twinleaves-logo.png",
     title: "SDE-2",
     date: "Nov 2025 - Present",
     responsibilities: [
@@ -160,8 +160,8 @@ const expCards = [
   },
   {
     review: "Led the optimization of the app build bundle size by 70-80%, resulting in much faster application load times.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
+    imgPath: "/images/wipro-logo.png",
+    logoPath: "/images/wipro-logo.png",
     title: "Project Engineer",
     date: "Apr 2022 - Sep 2025",
     responsibilities: [
